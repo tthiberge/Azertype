@@ -6,17 +6,19 @@
 
 lancerJeu()
 
-const inputJoueur = document.getElementById("inputEcriture")
-console.log(inputJoueur);
+// J'ai mis ce code en commentaire, nous pourrons le récupérer lorsque nous en auront besoin :
 
-const validerJoueur = document.getElementById("btnValiderMot")
-console.log(validerJoueur);
+// let inputEcriture = document.getElementById("inputEcriture")
+// console.log(inputEcriture)
 
-const motPropose=document.querySelector(".zoneProposition")
-console.log(motPropose)
+// let btnValiderMot = document.getElementById("btnValiderMot")
+// console.log(btnValiderMot)
 
-const zoneScore=document.querySelector(".zoneScore")
-console.log(zoneScore)
+// let zoneProposition = document.querySelector(".zoneProposition")
+// console.log(zoneProposition)
 
-const radios = document.querySelectorAll(".optionSource input")
-console.log(radios)
+// let spanScore = document.querySelector(".zoneScore span")
+// console.log(spanScore)
+
+// let listeBtnRadio = document.querySelectorAll(".optionSource input")
+// console.log(listeBtnRadio)
