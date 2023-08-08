@@ -60,35 +60,22 @@ function lancerJeu() {
   afficherResultat(score, i)
 }
 
-function typeOfList() {
-
-  let radioBtns = document.querySelectorAll("input[name=optionSource]")
-  // console.log(radioBtns);
-  let choix = ""
-  let list = ""
-
-  for (let i=0; i< radioBtns.length ; i++) {
-    if (radioBtns[i].checked) {
-      choix = radioBtns[i].id
-    }
-    break
-  }
-
-  // radioBtns.addEventListener("change", () => {
-
-  // })
-  // console.log(choix)
-
-  if (choix === "mots") {
-    list = listeMots
-  } else {
-    list = listePhrases
-  }
-
-  return list
-
-  // console.log(list)
+let listeBtnRadio = document.querySelectorAll("input[name=optionSource]")
+// console.log(radioBtns);
 
 
-
+for (let index = 0; index < listeBtnRadio.length; index++) {
+  listeBtnRadio[index].addEventListener("change", (event) => {
+      // Si c'est le premier élément qui a été modifié, alors nous voulons
+      console.log(event.target);
+      // jouer avec la listeMots.
+      if (event.target.value === "1") {
+          listeProposition = listeMots
+      } else {
+          // Sinon nous voulons jouer avec la liste des phrases
+          listeProposition = listePhrases
+      }
+      // Et on modifie l'affichage en direct.
+      afficherProposition(listeProposition[index])
+  })
 }
